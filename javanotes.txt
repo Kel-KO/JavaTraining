@@ -1,0 +1,46 @@
+JAVA NOTES
+-when a program is compiled, we create bytecode (platform independent) in .class files (COMPILE TIME) (JDK). The bytecode is then ran on the JVM(Java Virtual Machine) (RUNTIME)
+
+-COMPILE time allows for errors to be caught in compiling as opposed to RUNTIME which errors are caught when program is fully run. Runtime is more dynamic
+
+-Java has a key feature (Write once, Run anywhere (WORA)). The java code gets compiled once then can ruin on any platfprm that supports java w/o recompiling
+
+-an interface is contains automatically abstract attributes. if a subclass inherits from an interface, you use the keyword "IMPLEMENTS"
+
+3 main components of JAVA
+    -JDK (Java Development Kit) provides all the tools to create application including Java Compiler.
+    -JRE (Java Runtime Environment) is needed to run the compiled bytecode on the JVM.
+    -JVM (Java Virtual Machine) executes the bytecode and makes sure it runs smoothly on different platforms by linking it to system libraries
+
+-Wrapper classes are objects that give more flexibility to primitive data types. Wrapper classes -> (Integer, String, ArrayList, etc...) allows us to use methods like valueOf(), .tostring(), etc
+-ArrayList can only store objects not primitive types
+
+-Autoboxing changes a primitive data type into a wrapper class and Auto Unboxing does the reverse
+
+-Static method allows you to call class methods without creating an object of the class (classname.method) static methods can only access static variables
+-Insatnce method must have a created object of the class. can access static and non static variables
+
+-StringBuffer(synchronized) is thread safe(cannot call methods simultaneously) while StringBuilder(non synchronized) is not(can call methods simultaneously). (MAIN DIFFERENCE) Both are dynamic while String is fixed size\
+
+-Exception Handling uses try-catch blocks and other constructs to handle runtime errors
+
+-Lifecycle of a thread refers to the phases of a thread from creation to termination including states like new, runnable, blocked, waiting, timed, waiting, terminated
+
+-Aggregation vs Composition
+    -aggregation: objects can exist independantly, child object can outlive parent object (EX: A student can exist without a department)
+    -composition: child object depends on parent object, child is destroyed when parent is destroyed (EX: Libreary must xist for Books to be present)
+
+-Anonymous class is a class without a name. Instanciated and defined all at once. God for quickl custom implementations without creating seperate class files
+
+-Implicit vs Explicit Data Convesion
+    -Implicit(type coercion): automatic conversion of smaller data type to larger data type (int to double)
+    -Explicit: the reverse and not automatic. must be done manually (double to (int)) *note syntax double x = 10.5; int y = (int) x
+
+-VOLATILE keyword in java allows all variable changes to be visible by all threads ensuring consistent access across multiple threads
+
+-System.out(outputting messages) | System.in (taking user input) | System.err (outputting error messages)
+
+-Final, Finally, Finalize keywords
+    -Final (we already know)
+    -Finally is used for try-catch blocks. runs a block of code regarless of Exception
+    -Finalize is a special method called by Garbage Collector before reclaiming an objects memory
